@@ -1,0 +1,16 @@
+<h1><%= @task.title %></h1>
+
+<h2><%= @task.details %></h2>
+
+<% if @task.completed %>
+  <input type="checkbox" id="scales" name="completed" checked/>
+  <label for="completed"><%= "This task is completed! ✨"%></label>
+<% else %>
+  <input type="checkbox" id="scales" name="uncompleted" />
+  <label for="uncompleted"><%= "This task is not completed yet!"%></label>
+<% end %>
+
+<div>
+<a href="/tasks/<%= @task.id %>/edit">Edit</a>
+<a href="/tasks">Back to List</a>
+</div>
